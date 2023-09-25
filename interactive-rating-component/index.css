@@ -1,0 +1,135 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    background-color:hsl(216, 12%, 8%);
+    color:#fff;
+    font-family:Overpass;
+    font-weight:400;
+    font-size:15px;
+}
+
+ul,li{
+    list-style: none;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    gap:15px;
+    margin:0;
+    padding: 0;
+    margin-bottom:15px;
+}
+
+.form-rating.none{
+    display: none;
+}
+
+.form-rating button[type="submit"]{
+    appearance: none;
+    outline: 0;
+    display: block;
+    width:100%;
+    margin:10px 0;
+    text-align:center;
+    padding:10px 0;
+    text-transform: uppercase;
+    background-color: hsl(25, 97%, 53%);
+    font-size:12px;
+    font-weight:500;
+    border:0;
+    border-radius: 15px;
+    color:#fff;
+    letter-spacing: 2px;
+    transition: .2s;
+    cursor:pointer
+}
+
+.form-rating button[type="submit"]:hover{
+    color: hsl(25, 97%, 53%);
+    background-color:#fff;
+}
+
+.form-rating .form-content p,
+.state-submit p{
+    color:hsl(216, 12%, 54%)
+}
+
+.form-rating .form-content ul li label {
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    background-color: hsla(213, 16%, 24%, 0.896);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer
+}
+
+.form-rating .form-content ul li label:hover {
+    background-color: hsl(217, 12%, 63%);
+}
+
+
+.form-rating .form-content ul li label.active {
+    background-color: hsl(25, 97%, 53%);
+}
+
+
+main{
+    height:auto;
+    margin:0 20px;
+    background-color:hsl(213, 19%, 18%);
+    padding:12px;
+}
+
+.form-rating .form-image{
+    width:35px;
+    height:35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(213, 16%, 24%, 0.896);
+    border-radius:50%;
+}
+
+@media only screen and (min-width:401px){
+    main{
+        width:300px;
+        border-radius:25px;
+    }
+}
+
+/* Submit State*/
+
+.state-submit{
+    text-align: center;
+    display:none;
+}
+.state-submit.block{
+    display: block;
+    width:100%;
+    height:auto;
+}
+
+.state-submit img{
+    margin:auto;
+    display:block;
+    text-align:center
+}
+
+.state-submit .result{
+    color:hsl(25, 97%, 53%);
+    width:180px;
+    text-align: center;
+    margin:20px auto;
+    padding:3px 0;
+    border-radius:12px;
+    background-color: hsla(213, 16%, 24%, 0.896);
+}

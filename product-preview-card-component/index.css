@@ -1,0 +1,169 @@
+/*Use custum fonts*/
+
+
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/montserrat-bold-webfont.woff2') format('woff2'),
+         url('./fonts/montserrat-bold-webfont.woff2') format('woff');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/montserrat-medium-webfont.woff2') format('woff2'),
+         url('./fonts/montserrat-medium-webfont.woff2') format('woff');
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+/**/
+
+html{
+    font-size:14px;
+}
+
+body{
+    font-family: Montserrat, sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    overflow-x: hidden;
+    margin:0;
+    padding:0;
+    background-color:hsl(30, 38%, 92%)
+}
+
+/*Container*/
+
+.container{
+    margin: 50px 30px;
+}
+
+@media only screen and (min-width:360px){
+    .container{
+        margin-left: 0;
+        margin-right: 0;
+        width:350px;
+        height:600px;
+    }
+}
+
+
+
+.container .card{
+    background-color: #fff;
+    border-radius:15px;
+    height:100%;
+}
+
+
+.container .card .card-img{
+    width:100%;
+    height:280px;
+}
+
+.container .card .card-body{
+    padding:10px 15px;
+}
+
+.container .card .card-body .card-text{
+    font-weight:100;
+    line-height:1.3;
+    font-size:13px;
+}
+
+.container .card .card-body .card-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:10px 0;
+    background-color: hsl(158, 36%, 37%);
+    color:#fff;
+    margin:18px 0;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size:12px;
+    line-height:1.3
+}
+
+.container .card .card-body .card-link img{
+    margin-right:8px;
+}
+
+.container .card .card-body .price{
+    display: flex;
+    align-items: center;
+}
+
+.container .card .card-body .price .actual-price{
+    font-family:'Fraunces';
+    font-size:25px;
+    color:hsl(158, 36%, 37%);
+    margin-right:25px;
+}
+
+.container .card .card-body .price .old-price{
+    font-size:13px;
+}
+
+
+.container .card .card-img img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.container .card > .card-body .sub-title{
+    font-weight:200;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.container .card > .card-body .card-title{
+    font-weight:900;
+    text-transform:capitalize;
+    font-family:'Fraunces';
+    font-size:25px;
+}
+
+@media only screen and (min-width:600px){
+    .container{
+        width:500px;
+        margin:0;
+        height:330px;
+    }
+
+    .container .card{
+        display: flex;
+    }
+
+    .container .card .card-img{
+        height:100%;
+        flex:1 50%;
+    }
+
+    .container .card .card-body{
+        flex:1 50%;
+    }
+
+    .container .card .card-img img{
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-top-right-radius: 0px;
+    }
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; padding: 15px 0; }
+.attribution a { color: hsl(228, 45%, 44%); }

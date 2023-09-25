@@ -1,0 +1,174 @@
+body,html{
+    margin:0;
+    padding:0;
+    font-size:100%;
+    box-sizing: border-box;
+    font-family:Raleway,sans-serif;
+    width:100%;
+    overflow-x: hidden;
+}
+
+body > section {
+    padding:0 20px 40px;
+    margin:0 auto;
+    position:relative;
+    min-height:calc(100vh - 100px) ;
+}
+
+body > section h2{
+    text-align: center;
+}
+
+body > section p{
+    margin:35px auto;
+    max-width:500px;
+    width:100%;
+    text-align: center;
+}
+
+body > section p span{
+    display: inline-block;
+    padding:10px 20px;
+    border-radius:8px;
+    margin:0  12px;
+    cursor: pointer;
+    background-color: rgb(239, 227, 244);
+    font-weight: 600;
+}
+
+body > section p span.active{
+    color:rgb(132, 14, 178);
+    background-color: rgb(226, 202, 236);
+}
+
+body > section .calendrier-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    row-gap:1.2rem;
+    column-gap: 2rem;
+}
+
+/* Carousel */
+
+body > section .calendrier-container.carousel {
+    --n:1;
+    --i:0;
+
+    padding:0;
+    width:100%;
+    width:calc(var(--n)*100%);
+    display: flex;
+    align-items: center;
+    transition:.3s;
+    cursor:default;
+    margin:100px 0 0;
+    transform: translate(calc(var(--i, 0)/var(--n)*-100%));
+}
+
+body > section  span.arrow  {
+    display:none;
+    position:absolute;
+    top:50%;
+    cursor: pointer;
+    z-index:1;
+}
+
+body > section span.arrow.arrow-left  {
+    left:15px;
+}
+
+body > section span.arrow.arrow-right  {
+    right:15px;
+    transform: rotate(180deg);
+}
+
+@media only screen and (max-width:500px){
+    body > section span.arrow.arrow-left  {
+        left:0;
+    }
+    
+    body > section span.arrow.arrow-right  {
+        right:0;
+    }
+
+    body > section  span.arrow  {
+        top:75%;
+    }
+}
+
+body > section .calendrier-container.carousel> div  {
+    --n:1;
+    width:100%;
+    width:calc(100%/var(--n));
+    overflow-x: hidden;
+}
+
+body > section .calendrier-container.carousel> div{
+    border-bottom: none;
+}
+
+body > section .calendrier-container.carousel> div .calendrier {
+    max-width:350px;
+    margin:auto;
+    border-bottom:3px solid rgb(150, 48, 190);
+}
+
+body > section .calendrier-container > div {
+    width:100%;
+    max-width:100%;
+    border-bottom:3px solid rgb(150, 48, 190);
+    padding-bottom:20px;
+}
+
+body > section .calendrier-container > div .calendrier .days{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+@media only screen and (min-width:501px){
+    
+    body > section .calendrier-container > div  .calendrier .days{
+        grid-template-columns: auto-fit, minmax(30px, 1fr);
+    }
+    
+}
+
+body > section .calendrier-container > div .calendrier .days .day{
+    padding:8px 5px;
+    /*border:0.1px solid;
+    border-top:none;
+    border-right:none;*/
+    text-align: center;
+}
+
+body > section .calendrier-container > div .calendrier .days .day.name{
+    /*border: none;*/
+    font-weight:600;
+    color: rgb(150, 48, 190);
+}
+
+body > section .calendrier-container > div .calendrier .days .day.active{
+    background-color: rgb(224, 158, 250);
+    cursor: pointer;
+}
+
+
+body > section h3{
+    text-align: center;
+}
+
+@media only screen and (min-width:768px){
+    body > section {
+        padding:0 50px 40px;
+    }
+
+}
+
+@media only screen and (min-width:1200px){
+    body > section {
+        padding-left:15px;
+        padding-right:15px;
+        max-width:1200px
+    }
+}

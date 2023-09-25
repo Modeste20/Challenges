@@ -1,0 +1,122 @@
+html,body{
+    margin:0;
+    padding:0;
+    font-size:100%;
+    overflow-x:hidden;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+    height:100vh;
+}
+
+/*basic style for form controls*/
+ input, select {
+    font-family : inherit;
+    font-size   : 100%;
+    width : 180px;/*initaial width for all controls*/
+    margin: 0;
+    -webkit-box-sizing: border-box; /* Pour les anciennes versions des navigateurs WebKit */
+    -moz-box-sizing: border-box; /* Pour tous les navigateurs Gecko */
+    box-sizing: border-box;
+    outline: 0;
+}
+select{
+    appearance: none;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.change{
+    min-height:350px;
+    width:800px;
+    padding:0 10px;
+}
+
+.change h2{
+    text-align:center;
+    text-decoration:underline;
+}
+
+.change .results > div{
+    font-size:200%;
+    padding:30px 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.change .results > div span{
+    color:rgb(209, 118, 243);
+    display: inline-block;
+    font-weight:600;
+}
+
+.change form .switch{
+    cursor:pointer;
+    margin:25px auto 14px;
+}
+
+.change form .field > label{
+    font-size: 13px;
+}
+
+.change form .field input[type='text']{
+    height:99%;
+    border:none;
+    width:calc(100% - 110px);
+}
+
+.change form .field select{
+    width:100px;
+    height:100%;
+    border:none;
+    border-left:2px solid rgb(167, 81, 198);
+    padding-left:12px;
+    position: relative;
+    background-color: transparent;
+    z-index:1;
+}
+
+.change form .field .currency-fields,
+.change form .field .converted-currency-fields{
+    height:40px;
+    border:2px solid rgb(167, 81, 198);
+    position:relative
+}
+
+
+.change form .field .currency-fields::before,
+.change form .field .converted-currency-fields::before{
+    position:absolute;
+    content:url(./images/chevron-down.png);
+    right:7px;
+    transform: translateY(-40%);
+    top:50%;
+    display: block;
+    z-index:0;
+}
+
+
+.change form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+@media only screen and (min-width:501px) and (max-width:991px){
+    .change{
+        width:500px
+    }
+}
+@media only screen and (min-width:992px){
+    .change form{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .change form .switch{
+        margin:0;
+    }
+}

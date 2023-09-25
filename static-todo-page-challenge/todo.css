@@ -1,0 +1,76 @@
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    font-family:Poppins;
+    color:rgb(38, 6, 56);
+    background-color: rgba(240, 220, 251, 0.699);
+}
+
+img{
+    width:30px;
+    transform: translateY(8px);
+}
+
+
+.todo-list{
+    width:530px;
+    padding:10px 15px 60px;
+    border:2px solid rgba(62, 4, 95, 0.836);
+    border-radius:16px;
+    position:relative;
+}
+
+.todo-list > p{
+    position:absolute;
+    right:25px;
+    bottom:0px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.todo-list > p img{
+    width:20px;
+    margin-right:3px;
+    transform: translateY(7px);
+}
+
+.todo-list h2{
+    text-align:center;
+}
+
+.todo-list ul{
+    padding:0;
+    margin:0;
+}
+
+.todo-list ul li {
+    list-style: none;
+    position:relative;
+    padding:8px 0 8px 35px;
+}
+
+.todo-list ul li.active::before {
+    border:none;
+    width:25px;
+    height:25px;
+    background-image: url(./images/check-mark-button-48.png);
+    background-position: top left;
+    background-size: cover;
+    left:5px;
+    transform: translateY(-5px);
+}
+
+.todo-list ul li::before{
+    content:'';
+    position:absolute;
+    display: block;
+    width:12px;
+    height:12px;
+    top:50%;
+    transform: translateY(-2px);
+    left:10px;
+    border:2px solid rgb(99, 22, 145);
+}

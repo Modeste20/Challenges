@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./index.css">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+</head>
+
+<body>
+
+  <!-- Rating state start -->
+  <main>
+    <form class="form-rating" name="form-rating">
+      <div class="form-image">
+        <img src="./images/icon-star.svg" alt="Star" width="'15px">
+      </div>
+      <div class="form-content">
+        <h3>How did we do?</h3>
+        <p>
+          Please let us know how we did with your support request. All feedback is appreciated
+          to help us improve our offering!
+        </p>
+
+        <ul>
+          <li class="rating-item">
+            <label for="rating-1">
+              <span>1</span>
+              <input type="radio" name="rating" id="rating-1">
+            </label>
+          </li>
+
+          <li>
+            <label for="rating-2">
+              <span>2</span>
+              <input type="radio" name="rating" id="rating-2">
+            </label>
+          </li>
+
+          <li>
+            <label for="rating-3">
+              <span>3</span>
+              <input type="radio" name="rating" id="rating-3">
+            </label>
+          </li>
+
+          <li>
+            <label for="rating-4">
+              <span>4</span>
+              <input type="radio" name="rating" id="rating-4">
+            </label>
+          </li>
+
+          <li>
+            <label for="rating-5">
+              <span>5</span>
+              <input type="radio" name="rating" id="rating-5">
+            </label>
+          </li>
+        </ul>
+        <button type="submit">
+          Submit
+        </button>
+      </div>
+
+    </form>
+
+        <div class="state-submit">
+          <img src="./images/illustration-thank-you.svg" alt="Congratulations">
+          <div class="result">
+            You selected <span></span> out of 5
+          </div>
+          <div class="content">
+            <h3>Thank you</h3>
+            <p>
+              We appreciate you taking the time to give a rating. If you ever need more support,
+              don’t hesitate to get in touch!
+            </p>
+          </div>
+        </div>
+  </main>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./../images/favicon/favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>Currency Conversion</title>
+</head>
+<body>
+    <section class="change">
+            <h2>Currency Conversion</h2>
+            <div class="results" id="results"></div>
+            <form action="">
+            <div class="field currency">
+                <label for="currency">Currency</label>
+                <div class="currency-fields">
+                    <input type="text" id="currency" name="currency">
+                    <select name="currency" id="currency">
+                        <option value="eur">Euro</option>
+                        <option value="usd">Dollars USD</option>
+                        <option value="cad">Dollars CAD</option>
+                        <option value="dzd">Dinars DZD</option>
+                    </select>
+                </div>
+            </div>
+            <div class="switch">
+                <img src="./images/switch.png" alt="">
+            </div>
+            <div class="field converted-currency">
+                <label for="converted-currency">Converted in</label>
+                <div class="converted-currency-fields">
+                    <input type="text" id="converted-currency"  name="converted-currency" >
+                    <select name="converted-currency" id="converted-currency">
+                        <option value="eur">Euro</option>
+                        <option value="usd" selected >Dollars USD</option>
+                        <option value="cad">Dollars CAD</option>
+                        <option value="dzd">Dinars DZD</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>

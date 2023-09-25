@@ -1,0 +1,64 @@
+html,body{
+    margin:0;
+    padding:0;
+    font-family: "Lato";
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+
+.card{
+    width:700px;
+    height:400px;
+}
+
+.card .card-testimonial{
+    width:80%;
+    margin:auto;
+    text-align: center;
+}
+
+.card .card-testimonial .bulbes{
+    width:60px;
+    display: flex;
+    justify-content: space-between;
+    margin:40px auto 0;
+}
+
+.card .card-testimonial .bulbes .bulbe{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background-color: #ada9a9;
+}
+
+.card .card-testimonial .bulbes .bulbe.current-bulbe{
+    background-color: #000;
+}
+
+.card .card-testimonial .author img{
+    border-radius: 50%;
+}
+
+.card .card-testimonial .author > h3{
+    margin-top:5px;
+    font-size:15px;
+}
+
+.card .card-testimonial blockquote{
+    margin:30px 0;
+}
+
+.card .card-testimonial blockquote p::before{
+    content: "\201C";
+    font-size:18px;
+}
+
+.card .card-testimonial blockquote p::after{
+    content: "\201D";
+    font-size:18px;
+}

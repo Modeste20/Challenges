@@ -1,0 +1,128 @@
+/* Reset margin and padding*/
+
+*{
+    margin:0;
+    padding:0;
+}
+
+/*Use alternative to box CSS Model*/
+
+*,
+*::before,
+**::after{
+    box-sizing: border-box;
+}
+
+html,body{
+    font-size:100%;
+    font-family:Helvetica, sans-serif
+}
+
+body{
+    min-height:100vh;
+}
+
+a{
+    text-decoration: none;
+}
+
+.modal{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: #0000007f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .modal-container{
+    max-height:400px;
+    width:90%;
+    border-radius:5px;
+    background:#f9f7fa;
+    position: relative;
+    text-align: center;
+    padding:3rem 1rem 2rem;
+}
+
+@media screen and (min-width:500px) {
+    .modal .modal-container{
+        width:85%;
+        max-width:450px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .modal .modal-container{
+        width:45%;
+    }
+}
+
+.modal .modal-container .fa-times{
+    position:absolute;
+    right:0;
+    top:0;
+    width:1.8em;
+    height:1.8em;
+    display: grid;
+    place-items: center;
+    font-weight: light;
+    color:#775b84;
+    font-size:1.5rem;
+    cursor:pointer;
+}
+
+.modal .modal-container p{
+    margin:0.6rem 0 2rem;
+}
+
+.modal .modal-container nav{
+    margin-bottom:1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1em;
+}
+
+.modal .modal-container nav a{
+    padding:0.5em 0.6em;
+    display: inline-block;
+    text-align: center;
+    width:100px;
+    color:#fff;
+    border-radius:4px;
+}
+
+.modal .modal-container nav a.link-facebook{
+    background-color: #4267B2;
+}
+
+.modal .modal-container nav a.link-twitter{
+    background-color: #1DA1F2;
+}
+
+.modal .modal-container nav a.link-reddit{
+    background-color: #000;
+}
+
+.modal .modal-container nav .fa-brands{
+    margin-right:0.35em;
+}
+
+.modal .modal-container nav + div{
+    margin-bottom:1.6rem
+}
+
+.modal .modal-container button{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding:0.75em 1em;
+    font-size:0.85rem;
+    font-family: inherit;
+    cursor: pointer;
+    color: rgb(156, 42, 42);
+}
