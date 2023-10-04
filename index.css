@@ -1,9 +1,12 @@
+html,body{
+    overflow-x: hidden;
+}
+
 body{
     font-family:"Open Sans",sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow-x: hidden;
 }
 main{
     flex:1 100%;

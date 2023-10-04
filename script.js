@@ -79,6 +79,12 @@ const CARDS_CONTENT = [
         title:"Product preview card",
         description:"Another <a href='https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa' target='_blank'>frontend mentor challenge</a> met"
     },
+    {
+        img:"./images/challenges/dribbble-homepage.jpg",
+        link:'/dribbble-homepage-clone/',
+        title:"Cloning the dribbble homepage",
+        description:"Development of the design of the home page of the <a href='https://dribbble.com/' target='_blank'> dribbble platform</a>. A <a target='_blank' href='./dribbble-homepage-clone/images/screen-record-dribbble-homepage.mp4'>video of the platform's home page</a> at the time of cloning can be viewed online"
+    },
 ];
 const element_per_page = 6;
 
